@@ -277,6 +277,7 @@ func init() {
 		logrus.Infoln("[main] 从", *runcfg, "读取配置文件")
 		return
 	}
+	
 	config.W = []*driver.WSClient{driver.NewWebSocketClient(*url, *token)}
 	config.Z = zero.Config{
 		NickName:       append([]string{*adana}, "ATRI", "atri", "亚托莉", "アトリ"),
